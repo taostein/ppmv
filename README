@@ -1,0 +1,37 @@
+
+Very fast rendering of PPMs on any system supporting X11
+Designed for making digital art works, because that requires exploration
+
+== Build
+
+Compile with "make"
+
+If you have trouble building, it's probably because the X11 include path is wrong. Fix the X11_ROOT variable in the Makefile
+
+If your Xlib.h is at /opt/X11/include/X11/Xlib.h then X11_ROOT should be /opt/X11/
+
+== Run
+
+Once built, you need to have an X11 XServer running for this to run
+
+Run with:
+
+cat raimu.ppm | ./ppmv
+
+or:
+
+./ppmv raimu.ppm
+
+or:
+
+./ppmv raimu.ppm -s 10
+cat raimu.ppm | ./ppmv - -s 10
+
+The above two will close the window and exit after 10 seconds
+
+== Acks
+
+code by Tao Stein 石涛
+
+raimu.ppm example is original work by Guillaume Bog
+
